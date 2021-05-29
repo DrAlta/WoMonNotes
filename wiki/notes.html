@@ -207,6 +207,8 @@ Error message and password prompt
 
 <li>Acquiesce_&lt;Player&gt;</li>
 
+<li>assisting checks</li>
+
 <li>Bonded Friendship</li>
 
 <li>Buff and debuff fairies</li>
@@ -10339,7 +10341,7 @@ ToDo</pre>
 <div created="20210212191548550" creator="H" modified="20210212191558893" modifier="Hsingai Altaic" title="$:/status/UserName">
 <pre>Hsingai Altaica</pre>
 </div>
-<div list="[[Legends of the Untamed West notes]] GettingStarted ToDo" title="$:/StoryList">
+<div list="[[assisting checks]] [[Legends of the Untamed West notes]] GettingStarted ToDo" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -10491,6 +10493,63 @@ Try to sit near this person in class. Choose to work together in a class group. 
 <pre>You may play this card against the named player
 
 Should you remove all Acquiesce_&amp;lt;turn taker&amp;gt; conditions at the end of the players turn?</pre>
+</div>
+<div created="20210529111110090" creator="Hsingai Altaica" modified="20210529164255972" modifier="Hsingai Altaica" tags="ToDo Rules" title="assisting checks">
+<pre>Sometimes two or more Characters want to work together on an Action that requires an Attribute or Skill roll.
+
+!Synergy
+If all individuals have at least a Rank of Average in the Skill they may form a [[Synergy Group]] to do an action.
+
+When a [[Synergy Group]] forms the character has to choose to Assist or QA.
+
+If they choose Assist they get a level of [[Synergy &lt;Synergy Group&gt; Assisting]].
+If they choose to QA they get a level of [[Synergy &lt;Synergy Group&gt; QA]].
+
+{X, Y:When [[Synergy Group]], X, does an action every character that is qualified to do that action and has [[Synergy &lt;@X&gt; Assisting]] makes a Check for the action like they where doing it. the character with the hights rank in the skill for that action, Y, or one withe widest margin of success if tied on rank makes the skill check for the group, adding the magins of Success of assisting chacter other than himself. if an assisting player failed with skill check to assist everyone with [[Synergy &lt;@X&gt; QA]] makes a QA skill check with thre BOK of the skill @Y. 
+
+Each creature with the &amp;lsquo;Synergy &lt;@X&gt; QA&amp;rsquo; condition makes a QA skill check with DL of the SG's action 
+
+* On a Critical failure
+:* On a Critical failure
+:: if QAer have more thane 1 level of &amp;lsquo;Synergy &lt;@X&gt; QA&amp;rsquo; QAer looses 1 level of &amp;lsquo;Synergy &lt;@X&gt; QA&amp;rsquo;.
+:: else QAer makesa skill check the same as the SG, if it fails Add the margin of Failure of this check to the Synergy Group's roll
+:* On a Normal Failure
+::As usual.
+
+:*On a But Success
+:: set &amp;lsquo;loose Assist&amp;rsquo; flag
+
+:* On a Normal Success
+:: set &amp;lsquo;can clear&amp;rsquo; flag
+
+:*Severe Success
+:: Set &amp;lsquo;min Normal Success&amp;rsquo; flag
+
+:*Critical Success
+:: Set &amp;lsquo;min Normal Success&amp;rsquo; flag
+:: QAer gains a level of &amp;lsquo;Synergy &lt;@X&gt; Assisting&amp;rsquo;
+
+:if the &amp;lsquo;min Normal Succes&amp;rsquo; flag is set, then treat this check as Normal Success,
+:else if the &amp;lsquo;can Clear;rsquo; flag is set, then Resolved as Normal Failures.
+:else is &amp;lsquo;loose Assist&amp;rsquo; flag is set, then creature(QAee) looses a level of &amp;lsquo;Synergy &lt;@X&gt; Assisting&amp;rsquo;
+
+*On a Normal Failure
+:As usual.
+
+*On a But Success
+:Subtract Margin of Success from SG's roll
+:Creature looses a level of &amp;lsquo;Synergy &lt;@X&gt; Assisting&amp;rsquo;
+
+
+*On a Normal Success
+:Subtract Margin of Success from SG's roll
+
+*Severe Success
+:Severe Hit
+
+*Critical Success
+:Deadly Hit
+</pre>
 </div>
 <div created="20210212221824679" creator="Hsingai Altaica" modified="20210212223833901" modifier="Hsingai Altaica" tags="Relationship_Levels RL5" title="Bonded Friendship">
 <pre>! Bonded friendship
