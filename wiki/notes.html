@@ -11570,12 +11570,16 @@ The half forgotten</pre>
 <div color="#129310" created="20210214211812890" creator="Hsingai Altaica" modified="20210214211836612" modifier="Hsingai Altaica" title="Yiff">
 <pre></pre>
 </div>
-<div created="20210615115816760" creator="Hsingai Altaica" modified="20210615151309564" modifier="Hsingai Altaica" tags="" title="YTDNM reinforcement learning">
+<div created="20210615115816760" creator="Hsingai Altaica" modified="20210615155351129" modifier="Hsingai Altaica" tags="" title="YTDNM reinforcement learning">
 <pre>Your the Dog Now Ma(n|chine)
 
 ----
 #if (you got a reward)
-##add top of @History to @Trick
+## if reward is &gt; 0
+###Treat =true
+###add top of @History to @Trick
+##else (if reward &lt; 0)
+###Treat = False
 ##for X in @History
 ###update X in NN
 ###if (X was Conditioned) 
@@ -11585,7 +11589,8 @@ The half forgotten</pre>
 ##clear @History
 ##if (you are not sure what to do)
 ###if (second of @Trick not Conditioned)
-####add @Trick to @Repertoire
+####if (Treat)
+#####add @Trick to @Repertoire
 ###add new choice to @History as not Conditioned
 ##else (if you are sure what to do)
 ###add new choice to @History as Conditioned
