@@ -367,6 +367,8 @@ Error message and password prompt
 
 <li>Yiff</li>
 
+<li>YTDNM reinforcement learning</li>
+
 </ul>
 </p>
 
@@ -10390,7 +10392,7 @@ ToDo</pre>
 <div created="20210212191548550" creator="H" modified="20210212191558893" modifier="Hsingai Altaic" title="$:/status/UserName">
 <pre>Hsingai Altaica</pre>
 </div>
-<div created="20210613150944130" creator="Hsingai Altaica" list="$:/ControlPanel $:/Import GettingStarted_ ToDo" modified="20210613151547087" modifier="Hsingai Altaica" title="$:/StoryList">
+<div list="[[YTDNM reinforcement learning]] GettingStarted_ ToDo" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11567,6 +11569,42 @@ The half forgotten</pre>
 </div>
 <div color="#129310" created="20210214211812890" creator="Hsingai Altaica" modified="20210214211836612" modifier="Hsingai Altaica" title="Yiff">
 <pre></pre>
+</div>
+<div created="20210615115816760" creator="Hsingai Altaica" modified="20210615151309564" modifier="Hsingai Altaica" tags="" title="YTDNM reinforcement learning">
+<pre>Your the Dog Now Ma(n|chine)
+
+----
+#if (you got a reward)
+##add top of @History to @Trick
+##for X in @History
+###update X in NN
+###if (X was Conditioned) 
+####Reward = Reward minus( 1 minus likelihood of choosing X)
+###if(X was not Conditioned)
+####Reward = Reward times 0.5
+##clear @History
+##if (you are not sure what to do)
+###if (second of @Trick not Conditioned)
+####add @Trick to @Repertoire
+###add new choice to @History as not Conditioned
+##else (if you are sure what to do)
+###add new choice to @History as Conditioned
+#else (if you didn't get a reward)
+##if (your in not vary sure of what do)
+###if (you last action was Conditioned)
+####reward = -1
+####while(top of @History was Conditioned)
+#####pop top of @History as X
+#####Update X in NN
+#####reward = reward times likelihood of X
+####Clear @History
+###Clear @Trick
+###add new choice to @History as not Conditioned 
+##else (if you are sure of what to do)
+###if you last action was Conditioned)
+####add top of @History to @Trick 
+###add new choice to  @History as Conditioned.
+</pre>
 </div>
 
 
