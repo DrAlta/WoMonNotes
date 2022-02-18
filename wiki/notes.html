@@ -303,6 +303,8 @@ Error message and password prompt
 
 <li>Notes</li>
 
+<li>OL list numbering</li>
+
 <li>Party Making</li>
 
 <li>Pluralization</li>
@@ -10346,7 +10348,7 @@ ToDo</pre>
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Wiki Settings]]</pre>
+# [[OL list numbering]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10390,8 +10392,8 @@ ToDo</pre>
 <div created="20210212222354393" creator="Hsingai Altaica" modified="20220217154331219" modifier="Hsingai Altaica" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Tags</pre>
 </div>
-<div created="20210212191528977" creator="Hsingai Altaica" modified="20220217154326361" modifier="Hsingai Altaica" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20210212191528977" creator="Hsingai Altaica" modified="20220218080326819" modifier="Hsingai Altaica" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
@@ -10399,7 +10401,7 @@ ToDo</pre>
 <div created="20210212191548550" creator="H" modified="20210212191558893" modifier="Hsingai Altaic" title="$:/status/UserName">
 <pre>Hsingai Altaica</pre>
 </div>
-<div created="20220217153015988" creator="Hsingai Altaica" list="$:/ControlPanel [[Sex Positions]] [[Sex Mini Game Notes]] Acquiesce_&lt;Player&gt; GettingStarted_ ToDo" modified="20220218080116263" modifier="Hsingai Altaica" title="$:/StoryList">
+<div created="20220217153015988" creator="Hsingai Altaica" list="$:/Import $:/ControlPanel [[Sex Positions]] [[Sex Mini Game Notes]] Acquiesce_&lt;Player&gt; GettingStarted_ ToDo" modified="20220218080116263" modifier="Hsingai Altaica" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -11161,6 +11163,24 @@ buyer would likely expect to see the whole work.
 </div>
 <div color="#0000ff" created="20210214211800053" creator="Hsingai Altaica" modified="20210214211800465" modifier="Hsingai Altaica" title="Notes">
 <pre></pre>
+</div>
+<div created="20220113181559841" modified="20220218075204749" tags="$:/tags/Stylesheet Housekeeping" title="OL list numbering">
+<pre>ol {
+    counter-reset: item;
+    padding-left: 10px;
+}
+ol li {
+    display: block
+}
+ol li:before {
+    content: counters(item, &quot;.&quot;) &quot; &quot;;
+    counter-increment: item
+}
+toc-item:before {
+    display: none;
+    counter-increment: item
+}
+</pre>
 </div>
 <div created="20210624101554286" creator="Hsingai Altaica" modified="20210624101701643" modifier="Hsingai Altaica" tags="ToDo Story&amp;WorldBuilding" title="Party Making">
 <pre>!General - Party Relationships
