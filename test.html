@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TOoHNA pronouncuation </title>
+  </head>
+
+	<body>
+		TOoHNA is pronounced /twuː.ˈnə/ not /ˈtu.nə/
+🖕
+		<button onclick="speakNow()">Click me</button>
+
+    <script>
+
+	   var synth = window.speechSynthesis;
+	   var voices = synth.getVoices();
+
+	   var utter1 = new SpeechSynthesisUtterance("It is pronounced ");
+
+	   var utterToohna = new SpeechSynthesisUtterance("twoona");
+	   utterToohna.rate = 0.5;
+
+	   var utter2 = new SpeechSynthesisUtterance(" not ");
+
+	   var utterTuna = new SpeechSynthesisUtterance("tuna");
+	   utterTuna.rate = 0.5;
+
+	   var davidFound = false;
+
+	   for(var i = 0; i < voices.length ; i++) {
+			if(voices[i].name === "Microsoft David Desktop - English (United States)") {
+				utterToohna.voice = voices[i];
+				utterTuna.voice = voices[i];
+				davidFound = true;
+			};
+		};
+
+		function speakNow () {
+			synth.speak(utter1);
+			synth.speak(utterToohna);
+			synth.speak(utter2);
+			synth.speak(utterTuna);
+
+		};
+	</script>
+  </body>
+</html>
+
+
+
+The US Copyright office's <a href="https://cdn.loc.gov/copyright/history/mls/ML-443.pdf">REGISTRABILITY OF COMPUTER PROGRAMS THAT GENERATE TYPEFACES</a> and uphold by the courts in Adobe Systems, Inc. v. Southern Software, Inc. state that the computer program that says how to create a work is not a mere copy, it's a original work of authorship in it's own right. So if you don't feel out use is Fair use please sue us and have are programs officially declared as public domain works(remember 17 U.S. Code §103?) and that anyone can copy it and by a most trivial of mechanical means create a new work(Adobe Systems, Inc. v. Southern Software, Inc again) and their by avoiding copying your work. BTW: making a copy into your computers RAM so that it can display it to you is copyright infringement. 
+
+------------
+
+++++++++++++++++++++++++++++++++++++++
+================================================
+ecclesiastical
